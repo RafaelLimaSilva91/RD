@@ -29,7 +29,7 @@ end
 class CadastroUser < SitePrism::Page
   element :addButton, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button'
   element :select_user, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div'
-  element :select_userAdmin, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]'
+  element :select_userAdmin, "seletor_da_caixa_de_selecao"
 
   element :select_user_statusField, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]'
   element :insert_passwordField, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]/input'
@@ -38,10 +38,10 @@ class CadastroUser < SitePrism::Page
   element :insert_confirm_passwordField, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input'
   element :saveButton, :xpath, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]'
 
-  def cadastroUserAdmin
+  def cadastroUserAdmin(valor_Admin)
     addButton.click
     select_user.click
-    select_userAdmin.click
+
 
     select_user_statusField.set "Disabled"
     insert_passwordField.set "Teste@15243"
