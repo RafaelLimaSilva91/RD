@@ -44,3 +44,7 @@ Certifique-se de configurar seu ambiente para usar o navegador desejado e seu dr
 ## ▶️ Executando os Testes 
 
 Para executar os todos os testes, simplesmente use o seguinte comando:
+
+```shell
+cucumber
+```
